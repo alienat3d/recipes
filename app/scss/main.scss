@@ -1,0 +1,207 @@
+@import "reset"; // reset styles
+@import "fonts"; // local fonts settings
+@import "variables";
+@import "global";
+
+//BEM-blocks
+// @import 'blocks/test';
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  background-color: #fff;
+  color: #1f1f1f;
+}
+
+.recipe {
+  // .recipe__main-pic
+  &__main-pic {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  // .recipe__title
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #63666a;
+
+    @media (max-width: 816px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+    }
+  }
+  // .recipe__stats
+  &__stats {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #dceca8;
+
+    @media (max-width: 600px) {
+      padding: 25px 0;
+    }
+  }
+  // .recipe__stats-list
+  &__stats-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+
+    &:first-child::before,
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+
+    @media (max-width: 1000px) {
+      &:first-child::before,
+      &:last-child::after {
+        background-image: none;
+      }
+    }
+
+    &::before {
+      left: -8%;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/icons/clock.svg");
+    }
+    &::after {
+      right: -8%;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/icons/ppl.png");
+    }
+  }
+  // .recipe__stats-item
+  &__stats-item {
+    border-right: 1px dotted grey;
+    padding: 0 20px;
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+    @media (max-width: 832px) {
+      font-size: 20px;
+    }
+    @media (max-width: 620px) {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  }
+  // .recipe__stats-item-title
+  &__stats-item-title {
+    @include title-font;
+    margin-bottom: 20px;
+  }
+  // .recipe__stats-item-number
+  &__stats-item-number {
+  }
+  // .recipe__subtitle
+  &__subtitle {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    background-color: #b9dcd2;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 1%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 207px;
+      height: 22px;
+      background-image: url("../img/icons/herb.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+    @media (max-width: 650px) {
+      &::before,
+      &::after {
+        width: 20%;
+        height: 11px;
+      }
+    }
+    &::after {
+      transform: rotate(180deg) translateY(50%);
+      left: auto;
+      right: 1%;
+    }
+  }
+  // .recipe__ingredients-list
+  &__ingredients-list {
+    margin-bottom: 30px;
+    list-style: spoon;
+  }
+  // .recipe__ingredients-item
+  &__ingredients-item {
+    margin-left: 47px;
+    margin-bottom: 7px;
+  }
+  // .recipe__ingredients-item-num
+  &__ingredients-item-num {
+    margin-left: 5px;
+    margin-right: 3px;
+  }
+  // .recipe__ingredients-item-descr
+  &__ingredients-item-descr {
+    margin-left: 15px;
+    font-size: 18px;
+    color: grey;
+    &::before {
+      content: "*";
+    }
+  }
+  // .recipe__cooking-list
+  &__cooking-list {
+    position: relative;
+    margin-left: 45px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 463px;
+      height: 419px;
+      background-image: url("../img/bon-appetit.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      opacity: 0.1;
+    }
+  }
+  // .recipe__cooking-item
+  &__cooking-item {
+  }
+  // .recipe__cooking-img
+  &__cooking-img {
+    margin: 15px auto 15px 0;
+    display: block;
+  }
+  // .recipe__cooking-note
+  &__cooking-note {
+    margin: 10px 0;
+    font-style: italic;
+    font-size: 18px;
+    color: grey;
+  }
+}

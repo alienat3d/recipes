@@ -1,0 +1,10 @@
+//backgrounds
+// $body-bg: #ff55;
+
+//fonts
+
+// === MIXINS ===
+@mixin title-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
