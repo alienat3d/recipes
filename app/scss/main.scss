@@ -188,14 +188,29 @@ body {
       background-size: contain;
       opacity: 0.1;
     }
+
+    @media (max-width: 775px) {
+      &::after {
+        background-image: none;
+      }
+    }
   }
   // .recipe__cooking-item
   &__cooking-item {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
   // .recipe__cooking-img
   &__cooking-img {
     margin: 15px auto 15px 0;
     display: block;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
   // .recipe__cooking-note
   &__cooking-note {
