@@ -220,3 +220,13 @@ body {
     color: grey;
   }
 }
+
+.recipe__cooking-list.small-list.recipe__cooking-list {
+  &::after {
+    bottom: 120%;
+  }
+}
+
+.footer {
+  padding: 20px 0;
+}
