@@ -6,22 +6,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- === / META === -->
-  <title>Компот</title>
+
+  <title>Компот из свежих фруктов (яблок)</title>
+
+  <!-- === JAVASCRIPT === -->
+  <script src="../js/main.min.js" defer></script>
+  <!-- === / JAVASCRIPT === -->
   <!-- === CSS === -->
-  <link rel="stylesheet" href="../css/main.min.css?t=1722634962997">
+  <link rel="stylesheet" href="../css/main.min.css">
   <!-- === / CSS === -->
 </head>
 
 <body class="page-body">
   <!-- === HEADER === -->
-  <header>
-</header>
+  @@include('../blocks/header.html')
   <!-- === / HEADER === -->
 
   <main class="main">
     <section class="recipe  container">
-      <img class="recipe__main-pic" src="../img/dishes/zucchini-stuffed-with-minced-meat/zucchini-stuffed-with-minced-meat-hero.jpg" alt="Главное фото рецепта">
-      <h1 class="recipe__title">Цукини, фаршированные мясным фаршем</h1>
+      <img class="recipe__main-pic" src="" alt="Главное фото рецепта">
+      <h1 class="recipe__title">Компот из свежих фруктов (яблок)</h1>
       <div class="recipe__stats">
         <ul class="recipe__stats-list">
           <li class="recipe__stats-item">
@@ -37,30 +41,24 @@
             <p class="recipe__stats-item-number">45 мин</p>
           </li>
           <li class="recipe__stats-item">
-            <p class="recipe__stats-item-title">Порций</p>
-            <p class="recipe__stats-item-number">4</p>
+            <p class="recipe__stats-item-title">Литров</p>
+            <p class="recipe__stats-item-number">3,5</p>
           </li>
         </ul>
       </div>
       <h2 class="recipe__subtitle">Состав</h2>
+      <label class="recipe__calc-label" for="gram-calc">
+        Введите сколько грамм очищенных фруктов у вас есть:
+        <input class="recipe__calc-input" type="number" id="gram-calc">
+      </label>
       <ul class="recipe__ingredients-list">
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">4</span> цукини средних размеров<span class="recipe__ingredients-item-descr">около 15 - 20 см в длину</span></li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">500</span>г говяжьего фарша</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">400</span>г пассированных томатов</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">200</span>г сыра «Гауда», тёртого <span class="recipe__ingredients-item-descr">также подойдёт Чеддер или сыр на ваш вкус</span></li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">2</span> зубчика чеснока</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">1</span> средняя луковица</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">2</span> столовой ложки томатной пасты</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">2</span> столовой ложки сметаны</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">2</span> столовой ложки оливкового масла</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">1</span> чайная ложка порошка паприки<span class="recipe__ingredients-item-descr">средней пикантности</span></li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">0,5</span> чайной ложки соли</li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">1,5</span> чайной ложки Орегано<span class="recipe__ingredients-item-descr">можно сухого</span></li>
-        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num">1</span> щепотка сахара</li>
+        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num gram-calc-output">144</span>г сахара
+        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num gram-calc-output">900</span>г фруктов</li>
+        <li class="recipe__ingredients-item"><span class="recipe__ingredients-item-num gram-calc-output">3600</span>мл воды</li>
       </ul>
       <h2 class="recipe__subtitle">Готовка</h2>
       <ol class="recipe__cooking-list">
-        <li class="recipe__cooking-item">Сперва разогрейте плиту до 180°С в режиме рециркуляции воздуха.</li>
+        <!-- <li class="recipe__cooking-item">Сперва разогрейте плиту до 180°С в режиме рециркуляции воздуха.</li>
         <li class="recipe__cooking-item">Вымойте цукини, разрежьте их пополам и вычистите от мякоти с помощью столовой ложки.
           <img class="recipe__cooking-img" src="../img/dishes/zucchini-stuffed-with-minced-meat/zucchini-stuffed-with-minced-meat-1.webp" alt="Фото рецепта шаг №2">
         </li>
@@ -104,19 +102,14 @@
           Цукини-кораблики сразу же сервировать ещё горячими и наслаждаться. Приятного аппетита!
           <img class="recipe__cooking-img"
             src="../img/dishes/zucchini-stuffed-with-minced-meat/zucchini-stuffed-with-minced-meat-9.webp" alt="Фото рецепта шаг №10">
-        </li>
+        </li> -->
       </ol>
     </section>
   </main>
 
   <!-- === FOOTER === -->
-  <footer class="footer">
-</footer>
+  @@include('../blocks/footer.html')
   <!-- === / FOOTER === -->
-
-  <!-- === JAVASCRIPT === -->
-  <script src="js/main.min.js?t=1722634962997"></script>
-  <!-- === / JAVASCRIPT === -->
 </body>
 
 </html>

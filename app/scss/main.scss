@@ -107,9 +107,6 @@ body {
     @include title-font;
     margin-bottom: 20px;
   }
-  // .recipe__stats-item-number
-  &__stats-item-number {
-  }
   // .recipe__subtitle
   &__subtitle {
     margin-bottom: 30px;
@@ -145,6 +142,18 @@ body {
       left: auto;
       right: 1%;
     }
+  }
+  // .recipe__calc-label
+  &__calc-label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+  }
+  // .recipe__calc-input
+  &__calc-input {
+    padding: 5px 7px;
+    max-width: 100px;
+    font-size: 20px;
   }
   // .recipe__ingredients-list
   &__ingredients-list {

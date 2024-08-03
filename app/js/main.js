@@ -1,2 +1,3 @@
-import {testFunction} from './scripts/test';
-testFunction();
+import { compoteCalcFunc } from './scripts/compote-calc';
+
+compoteCalcFunc();
